@@ -18,7 +18,7 @@ class AuthCheckInterceptor: HandlerInterceptor {
         }
         if (session.getAttribute("loginSession") == null) {
             val objectMapper = ObjectMapper()
-            val message: ErrorResponse = ErrorResponse.builder().message("로그인이 필요한 서비스 입니다.").build()
+            //val message: ErrorResponse = ErrorResponse.builder().message("로그인이 필요한 서비스 입니다.").build()
             val json = objectMapper.writeValueAsString(message)
             response.setContentType("application/json;charset=UTF-8")
             response.setCharacterEncoding("utf-8")
